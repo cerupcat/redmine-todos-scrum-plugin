@@ -23,13 +23,18 @@ span.todo-has-children-true {text-decoration: underline; }
 /* #project-todos ul.depth0 { background-color: #cecece;} */
 
 div.new-todo { 
-	background-color: #fec;
-	border: 1px dashed grey;
-	padding: 3px;
+	background-color: #F6F6F6;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	box-shadow: 0 0 5px #bbb inset;
+	-webkit-box-shadow: 0 0 5px #bbb inset;
+	-moz-box-shadow: 0 0 5px #bbb inset;
+	padding: 10px 10px 7px 10px;
 	margin-top: 10px;
 	margin-bottom: 20px;
+	font-size: 0.8em;
 }
-div.new-todo  { font-size: 0.8em}
 .new-todo-date-cancel {  position: relative; top: 0.6em; left: -0.2em; }
 
 
@@ -79,7 +84,7 @@ ul#todo-children-ul_rootnot-editable .todo-controls img {
 .todos .notes span { margin-left: 1em; }
 
 input#todo_text {
-	width:80%;
+	width:85%;
 	margin: 2px;
 }
 
@@ -91,7 +96,7 @@ input#todo_submit {
 
 #todo_due_block {
 	display: inline-block;
-	line-height: 24px;
+	line-height: 22px;
 }
 
 #todos-link-bar {
@@ -111,7 +116,7 @@ div#issue-todos #project-todos span.notes span.refers { display: none;}
 li .todo-content .text form div{ display: none;}
 
 #project-todos li .todo-content span.flash.error, div.new-todo span.flash.error {
-    background: transparent url(/images/false.png) no-repeat scroll 0px -2px;
+    background: transparent url(../../../images/false.png) no-repeat scroll 0px -2px;
     color: #ff0000;
     font-size: 11px;
     padding-left: 20px;
@@ -122,11 +127,16 @@ dt.todo {
 }
 
 .todos-edit {
-  border: 1px solid #e4e4e4; 
   padding: 0.7em; 
   margin:0.4em; 
-  background-color:#f6f6f6;
-  float: left;
+  background-color:#fec;
+  font-size: 0.8em;
+  line-height: 22px;
+}
+#todos-edit_cancel {
+	float: right;
+	font-size: 1.1em;
+	padding-right: 5px;
 }
 .clearer {}
 .todos-edit form { display: inline; }

@@ -4,9 +4,11 @@
   <div class='todos-edit'>
     <% remote_form_for([todo.todoable,todo], :html => {:class => 'inline'}) do |f| %>
       <%= f.text_field :text %>
-      Due:
-      <%= f.text_field :due, :size => 8 %>
+      <%= f.submit %>
+      <br />
+      Due 
       <%= calendar_for :todo_due %>
+      <%= f.text_field :due, :size => 10 %>
       <% if todo.todoable.is_a? Project %>
         <%= f.select :assigned_to_id, todo.todoable.users.collect{|m| [m.name,m.id]},
              {:prompt=> l(:todo_new_assign_to_tooltip) },  
@@ -19,10 +21,10 @@
               {:prompt=> l(:todo_new_issue_tooltip), :selected => (todo.issue_id)?  todo.issue_id.to_i : nil}
         %>
       <% end %>
-      <br />
-      <%= f.submit %>
-      <%= link_to_remote("cancel", :url => polymorphic_path([todo.todoable,todo]), :method => :get) %>
-      
+	  <span id="todos-edit_cancel">
+        or 
+        <%= link_to_remote("Cancel", :url => polymorphic_path([todo.todoable,todo]), :method => :get) %>
+      </span>
     
     <% end %>
 

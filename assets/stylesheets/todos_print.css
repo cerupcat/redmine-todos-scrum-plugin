@@ -75,6 +75,12 @@ span.todo-has-children-true {}
   min-height: 6.2em;
 }
 
+div#content {
+	width: 100%;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
 div#issue-todos .todo { padding: 4px;}
 div#issue-todos .todo { border-bottom: 1px solid #ddd; }
 div#issue-todos p { margin-top: 0; margin-bottom: 1em;}
@@ -86,7 +92,7 @@ div#issue-todos #project-todos span.notes span.refers { display: none;}
 li .todo-content .text form div{ display: none;}
 
 #project-todos li .todo-content span.flash.error, div.new-todo span.flash.error {
-    background: transparent url(/images/false.png) no-repeat scroll 0px -2px;
+    background: transparent url(../../../images/false.png) no-repeat scroll 0px -2px;
     color: #ff0000;
     font-size: 11px;
     padding-left: 20px;

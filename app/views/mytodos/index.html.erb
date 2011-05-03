@@ -5,7 +5,7 @@
 
 <div id=project-todos>
   <%= render :partial => 'todos/link_bar' %>
-  <h3><%= l(:mytodos_heading)%></h3>
+  <h2><%= l(:mytodos_heading)%></h2>
   
   <%= render :partial => 'todos/new_todo',
        :locals => {:todo => @new_todo } %>
@@ -21,7 +21,7 @@
 <div id=project-todos>
   <% @grouped_project_todos.each do |project, todos| %>
   
-    <h3>
+    <h3 class="todos_project_name">
       
         <%= link_to h(project.name), 
            {:controller => 'todos', :action => 'index', :project_id => project},
@@ -36,3 +36,6 @@
   <% end %>
 
 </div>
+
+<% content_for :sidebar do %>
+<% end %>

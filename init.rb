@@ -46,8 +46,8 @@ Redmine::Plugin.register :redmine_todos_plugin do
     permission :view_todos, {:todos => [:index, :show] }
       
     permission :edit_todos,
-      {:todos => [:create, :destroy, :new, :toggle_complete, :sort, :edit, :update],
-        :issues => [:create, :destroy, :new, :toggle_complete, :sort, :edit, :update]}
+      {:todos => [:create, :destroy, :new, :toggle_complete, :sort, :edit, :update]}
+#        :issues => [:create, :destroy, :new, :toggle_complete, :sort, :edit, :update]}
   
     permission :use_personal_todos,
       {:mytodos => [:index,:destroy, :new, :create, :toggle_complete, :index, :sort, :edit, :update]}
@@ -63,7 +63,7 @@ Redmine::Plugin.register :redmine_todos_plugin do
   menu :project_menu, :todos, {:controller => 'todos', :action => 'index'}, 
       :caption => :label_todo_plural, :after => :new_issue, :param => :project_id
 
-  activity_provider :todos, :default => false
+  activity_provider :todos
 end
 
 #fix required to make the plugin work in devel mode with rails 2.2

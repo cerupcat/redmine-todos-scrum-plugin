@@ -1,10 +1,12 @@
-
-
+h3.todos_project_name {
+	border-top: 1px solid #ddd;
+	padding-top: 15px;
+}
 /* css for the project todos screen */
 #project-todos ul {
 	/*list-style-image: url(/images/sub.gif); */
-		list-style-type: none;
-
+	list-style-type: none;
+	padding: 0;
 }
 #project-todos ul.root {
 	list-style-image: none;
@@ -12,8 +14,8 @@
 	
 }
 #project-todos ul.root li { font-size: 1.1em; padding-bottom: 0.6em; }
-#project-todos ul.root ul.children { padding-bottom: 0px; padding-top: 0.5em;}
-#project-todos ul.root ul.children li { font-size: 0.9em; padding-bottom: 0em; padding-top: 0.0em;}
+#project-todos ul.root ul.children { padding-bottom: 0px; padding-top: 0.5em; padding-left: 2em; }
+#project-todos ul.root ul.children li { font-size: 0.9em; padding-bottom: 0em; padding-top: 0.2em;}
 /*#project-todos div.children { padding-bottom: 10px;}*/
 
 span.todo-has-children-true {text-decoration: underline; }
@@ -21,12 +23,10 @@ span.todo-has-children-true {text-decoration: underline; }
 /* #project-todos ul.depth0 { background-color: #cecece;} */
 
 div.new-todo { 
-	background-color: #ffe2a9;
-	border: 1px solid grey;
+	background-color: #fec;
+	border: 1px dashed grey;
 	padding: 3px;
-	width: 500px;
-	margin-left: 40px;
-	margin-top: 5px;
+	margin-top: 10px;
 	margin-bottom: 20px;
 }
 div.new-todo  { font-size: 0.8em}
@@ -47,12 +47,23 @@ div.new-todo  { font-size: 0.8em}
 .todo-controls {
 	margin-left: 0px;
 	text-decoration: none;
+	border: 1px solid #ccc;
+	padding: 0 0 8px 5px;
+	margin-right: 5px;
+	vertical-align: 25%;
+}
+ul#todo-children-ul_rootnot-editable .todo-controls {
+	border: none;
+	margin: 0 -2px 0 0;
+	padding: 0 0 0 0;
+}
+ul#todo-children-ul_rootnot-editable .todo-controls img {
+	padding-top: 3px;
 }
 .todo-controls img, .todo-controls a {
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
 	vertical-align:middle;
-
 }
 .todos .date {
 	font-weight: bold;
@@ -67,10 +78,26 @@ div.new-todo  { font-size: 0.8em}
 .todos .notes {font-size: 0.9em; font-style:italic;  color: #446994; }
 .todos .notes span { margin-left: 1em; }
 
+input#todo_text {
+	width:80%;
+	margin: 2px;
+}
+
+input#todo_submit {
+	margin-right: 5px;
+	margin-top: 3px;
+	float: right;
+}
+
+#todo_due_block {
+	display: inline-block;
+	line-height: 24px;
+}
+
 #todos-link-bar {
   float: right;
   vertical-align: bottom;
-  min-height: 6.2em;
+  margin-top: 5px;
 }
 
 div#issue-todos .todo { padding: 4px;}

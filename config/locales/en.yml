@@ -1,11 +1,11 @@
 #Todos English locale File for Rails >= 2.2.2
 en:
-  label_todo_plural: ToDos
+  label_todo_plural: Todos
   my_todos_title: My Todos
   
-  todo_sort_no_project_error: "cant sort without a project!"
+  todo_sort_no_project_error: "Can't sort without a project!"
   todo_project_not_found_error: "Project not found!"
-  todo_new_missing_update_target_error: "You need an update_target!!"
+  todo_new_missing_update_target_error: "You need an update target!"
   
   mytodos_heading: My Personal Todos
   mytodos_edit_project_tooltip: "Edit the todos for this project"
@@ -20,14 +20,14 @@ en:
   todos_project_heading: Todos for
   todos_print_button_tooltip: Print this list
   
-  todo_unmark_tooltip: Mark this todo(and children) as Uncomplete
-  todo_mark_tooltip: Mark this todo(and children) as Done
-  todo_add_child_tooltip: 'add child to this todo'
-  todo_delete_tooltip: delete this todo(and children!)
+  todo_unmark_tooltip: Mark this todo (and children) as Uncomplete
+  todo_mark_tooltip: Mark this todo (and children) as Done
+  todo_add_child_tooltip: 'Add child to this todo'
+  todo_delete_tooltip: 'Delete this todo (and children!)'
   
-  todo_due_label: "Due:"
-  todo_assigned_label: "Assigned to:"
-  todo_ref_label: "Ref:"
+  todo_due_label: "due "
+  todo_assigned_label: "for "
+  todo_ref_label: "ref "
   
   project_module_todo_lists: Todo Lists
   

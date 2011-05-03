@@ -43,11 +43,9 @@
   <% else %>
     <%=
       if todo.parent_id.nil? || todo.children.any? 
-          #image_tag('sub.gif')
           image_tag('bullet_black.png') 
       else
-          #image_tag('bullet_black.png')
-          image_tag('sub.gif')          
+          image_tag('bullet_arrow_right.png')
       end
     %>
   <% end %>

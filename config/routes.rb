@@ -9,6 +9,9 @@ ActionController::Routing::Routes.draw do |map|
   
   #nicer looking shortcut to mytodos for the top menu
   map.my_todos 'my/todos', :controller => :mytodos, :action => :index
+
+  # Interim fix for https://github.com/dalyons/redmine-todos-scrum-plugin/issues/21
+  map.connect 'projects/:project_id/todos/show/:id', :controller => "todos", :action => "show"
   
   #map.resources :mytodos, :name_prefix => 'project_', :path_prefix => '/projects/:project_id'
   #map.with_options :controller => 'mytodos' do |mytodos_routes|

@@ -13,7 +13,7 @@ h3.todos_project_name {
 	list-style-type: none;
 	
 }
-#project-todos ul.root li { font-size: 1.1em; padding-bottom: 0.6em; }
+#project-todos ul.root li { font-size: 1.1em; }
 #project-todos ul.root ul.children { padding-bottom: 0px; padding-top: 0.5em; padding-left: 2em; }
 #project-todos ul.root ul.children li { font-size: 0.9em; padding-bottom: 0em; padding-top: 0.2em;}
 /*#project-todos div.children { padding-bottom: 10px;}*/
@@ -53,17 +53,17 @@ div.new-todo {
 	margin-left: 0px;
 	text-decoration: none;
 	border: 1px solid #ccc;
-	padding: 0 0 8px 5px;
+	padding: 2px 0 2px 5px;
 	margin-right: 5px;
+	margin-left: 15px;
 	vertical-align: 25%;
+	float: right;
 }
-ul#todo-children-ul_rootnot-editable .todo-controls {
+.todo-bullet {
+	margin-left: 0px;
+	text-decoration: none;
 	border: none;
-	margin: 0 -2px 0 0;
-	padding: 0 0 0 0;
-}
-ul#todo-children-ul_rootnot-editable .todo-controls img {
-	padding-top: 3px;
+	vertical-align: -20%;
 }
 .todo-controls img, .todo-controls a {
 	margin: 0 0 0 0;

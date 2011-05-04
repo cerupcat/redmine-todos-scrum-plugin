@@ -6,9 +6,18 @@
 <% editable ||= false %>
 
 
+<span class="todo-bullet">
+    <%=
+      if todo.parent_id.nil? || todo.children.any? 
+          image_tag('bullet_black.png') 
+      else
+          image_tag('bullet_arrow_right.png')
+      end
+    %>
+</span>
 
-<span class="todo-controls">
   <% if editable then %>
+<span class="todo-controls">
   
     <% todo_issue = ((@issue && @issue.id) || todo.issue_id) %>
     <% todo_class = todo.done ? 'icon-restore' : 'icon-done' %>
@@ -39,17 +48,8 @@
       :update => "todo_#{todo.id}" ) 
       
     %>
-  
-  <% else %>
-    <%=
-      if todo.parent_id.nil? || todo.children.any? 
-          image_tag('bullet_black.png') 
-      else
-          image_tag('bullet_arrow_right.png')
-      end
-    %>
-  <% end %>
 </span>
+  <% end %>
 
 <span class="todo-content <%= todo.done ? 'done' :'' %>">
 

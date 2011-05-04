@@ -50,7 +50,7 @@ Redmine::Plugin.register :redmine_todos_plugin do
 #        :issues => [:create, :destroy, :new, :toggle_complete, :sort, :edit, :update]}
   
     permission :use_personal_todos,
-      {:mytodos => [:index,:destroy, :new, :create, :toggle_complete, :index, :sort, :edit, :update]}
+      {:mytodos => [:index,:destroy, :new, :create, :toggle_complete, :index, :sort, :edit, :update, :show]}
          
   end
  

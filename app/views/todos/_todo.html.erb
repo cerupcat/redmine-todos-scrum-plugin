@@ -5,17 +5,6 @@
 %>
 <% editable ||= false %>
 
-
-<span class="todo-bullet">
-    <%=
-      if todo.parent_id.nil? || todo.children.any? 
-          image_tag('bullet_black.png') 
-      else
-          image_tag('bullet_arrow_right.png')
-      end
-    %>
-</span>
-
   <% if editable then %>
 <span class="todo-controls">
   

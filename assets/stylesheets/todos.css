@@ -13,9 +13,9 @@ h3.todos_project_name {
 	list-style-type: none;
 	
 }
-#project-todos ul.root li { font-size: 1.1em; }
+#project-todos ul.root li { font-size: 1.1em; padding-left: 20px; background: transparent url('../../../images/bullet_black.png') no-repeat left top; }
 #project-todos ul.root ul.children { padding-bottom: 0px; padding-top: 0.5em; padding-left: 2em; }
-#project-todos ul.root ul.children li { font-size: 0.9em; padding-bottom: 0em; padding-top: 0.2em;}
+#project-todos ul.root ul.children li { font-size: 0.9em; padding-bottom: 0em; padding-top: 0.2em; padding-left: 20px; background: transparent url('../../../images/bullet_arrow_right.png') no-repeat left top; }
 /*#project-todos div.children { padding-bottom: 10px;}*/
 
 span.todo-has-children-true {text-decoration: underline; }
@@ -50,6 +50,7 @@ div.new-todo {
 }*/
 
 .todo-controls {
+	width: 66px;
 	margin-left: 0px;
 	text-decoration: none;
 	border: 1px solid #ccc;
@@ -123,7 +124,7 @@ li .todo-content .text form div{ display: none;}
 }
 
 dt.todo {
-    background-image:url(../images/todo.png);
+    background-image:url(../../../images/todo.png);
 }
 
 .todos-edit {

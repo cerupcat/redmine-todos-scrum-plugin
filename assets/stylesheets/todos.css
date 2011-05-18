@@ -59,6 +59,10 @@ div.new-todo {
 	margin-left: 15px;
 	vertical-align: 25%;
 	float: right;
+	opacity: 0.35;
+}
+.todo-controls:hover {
+	opacity: 1.0;
 }
 .todo-bullet {
 	margin-left: 0px;
